@@ -10,6 +10,11 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <% if user_signed_in? %>
+　  　<%= render 'tag_searches/tagsearch' %>
+    <% end %>
+    
+    
       <main>
         <p id="notice"><%= notice %></p>
         <%= yield %>
